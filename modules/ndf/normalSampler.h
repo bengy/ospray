@@ -1,7 +1,5 @@
 #pragma once
 // ospray
-#include "common/Material.h"
-#include "render/Renderer.h"
 
 // system
 #include <vector>
@@ -11,11 +9,13 @@ namespace ndf {
 
 /*! \brief Renderer that samples normals
 */
+struct Renderer;
 struct NormalSampler : public Renderer {
   NormalSampler();
   virtual ~NormalSampler() = default;
   virtual std::string toString() const override;
   virtual void commit() override;
+  std::string getTest() { return "it works!"; }
 };
 
 // Inlined member functions ///////////////////////////////////////////////
