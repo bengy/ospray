@@ -1,6 +1,5 @@
 // obj
 #include "normalSampler.h"
-#include "render/Renderer.h"
 // ispc exports
 #include "normalSampler_ispc.h"
 

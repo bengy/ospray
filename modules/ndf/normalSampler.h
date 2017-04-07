@@ -1,5 +1,6 @@
 #pragma once
 // ospray
+#include "render/Renderer.h"
 
 // system
 #include <vector>
@@ -9,7 +10,6 @@ namespace ndf {
 
 /*! \brief Renderer that samples normals
 */
-struct Renderer;
 struct NormalSampler : public Renderer {
   NormalSampler();
   virtual ~NormalSampler() = default;
