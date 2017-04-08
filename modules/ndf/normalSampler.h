@@ -1,6 +1,5 @@
 #pragma once
 // ospray
-#include "common/Material.h"
 #include "render/Renderer.h"
 
 // system
@@ -16,6 +15,7 @@ struct NormalSampler : public Renderer {
   virtual ~NormalSampler() = default;
   virtual std::string toString() const override;
   virtual void commit() override;
+  std::string getTest() { return "it works!"; }
 };
 
 // Inlined member functions ///////////////////////////////////////////////
