@@ -25,6 +25,8 @@ IF (OSPRAY_MODULE_NORMAL_SAMPLER)
   OSPRAY_CREATE_LIBRARY(ospray_module_ndf
     normalSampler.cc
     normalSampler.ispc
+    ndfBinner.cc
+    ndfBinner.ispc
 
   LINK
 
