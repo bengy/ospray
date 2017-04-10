@@ -57,7 +57,7 @@ export void NDFBinner_resetBins(void *uniform _self) {
   }
 }
 
-export void NDFBinner_getBinned(void *uniform _self, uniform float (&binned)[]) {
+export void NDFBinner_getBinned(void *uniform _self, uniform float* uniform binned) {
   uniform NDFBinner *uniform self = (uniform NDFBinner *uniform)_self;
   uint32 binCount = self->binSize * self->binSize;
   int maxIndex = maximumValueOffset(self->binned, binCount);

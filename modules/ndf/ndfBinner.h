@@ -23,7 +23,7 @@ struct NDFBinner : public NormalSampler {
   virtual std::string toString() const override;
   virtual void commit() override;
   void resetBins();
-  void getBinned(float (&bins)[]);
+  void getBinned(float *bins);
   std::string getTest() { return "it works!"; }
 };
 

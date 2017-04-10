@@ -24,14 +24,14 @@ void NDFBinner::commit() {
   const vec4f globalToLocal =
       getParam4f("globalToLocal", vec4f(1.f, 0.f, 0.f, 0.f));
   if (getIE()) {
-    ispc::NDFBinner_set(getIE(), (const ispc::vec4f&)globalToLocal, seed,
+    ispc::NDFBinner_set(getIE(), (const ispc::vec4f &)globalToLocal, seed,
                         binType, binSize);
   }
 }
 
 void NDFBinner::resetBins() { ispc::NDFBinner_resetBins(getIE()); }
 
-void NDFBinner::getBinned(float (&binned)[]) {
+void NDFBinner::getBinned(float *binned) {
   ispc::NDFBinner_getBinned(getIE(), binned);
 }
 
