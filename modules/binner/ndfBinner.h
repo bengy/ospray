@@ -7,7 +7,7 @@
 
 #pragma once
 // ospray
-#include "normalSampler.h"
+#include "render/Renderer.h"
 
 // system
 #include <vector>
@@ -17,14 +17,13 @@ namespace ndf {
 
 /*! \brief Renderer that samples normals
 */
-struct NDFBinner : public NormalSampler {
+struct NDFBinner : public Renderer {
   NDFBinner();
   virtual ~NDFBinner() = default;
   virtual std::string toString() const override;
   virtual void commit() override;
   void resetBins();
   void getBinned(float *bins);
-  std::string getTest() { return "it works!"; }
 };
 
 // Inlined member functions ///////////////////////////////////////////////

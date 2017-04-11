@@ -22,9 +22,9 @@ IF (OSPRAY_MODULE_NORMAL_SAMPLER)
   INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
   INCLUDE_DIRECTORIES_ISPC(${CMAKE_CURRENT_BINARY_DIR})
 
-  OSPRAY_CREATE_LIBRARY(ospray_module_ndf
-    normalSampler.cc
-    normalSampler.ispc
+  OSPRAY_CREATE_LIBRARY(ospray_module_binner
+    ndfBinner.cc
+    ndfBinner.ispc
 
   LINK
 

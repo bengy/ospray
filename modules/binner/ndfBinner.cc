@@ -39,3 +39,7 @@ OSP_REGISTER_RENDERER(NDFBinner, ndfbinner);
 
 }  // ::ospray::ndf
 }  // ::ospray
+
+extern "C" void ospray_init_module_binner() {
+  std::cout << "#osp:pkd: loading 'binner' module" << std::endl;
+}
